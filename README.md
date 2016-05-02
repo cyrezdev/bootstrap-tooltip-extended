@@ -25,4 +25,3 @@ Example:
 When "auto-dir" is specified and page direction (language) is RTL, it will automatically reverse the horizontal placement of the tooltip.
 
 For example, if placement is "auto-dir left", the tooltip will display to the right if language is RTL (html attribute dir="rtl"), otherwise it will display left (default direction is "ltr").
-Example:
