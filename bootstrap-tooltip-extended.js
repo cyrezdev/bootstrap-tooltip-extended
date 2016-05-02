@@ -50,6 +50,11 @@
           this.options.placement.call(this, $tip[0], this.$element[0]) :
           this.options.placement
 
+        // Detect if auto direction placement
+        var autoDirToken = /\s?auto-dir?\s?/i
+        var autoDirPlace = autoDirToken.test(placement)
+        if (autoDirPlace) placement = placement.replace(autoDirToken, '') || 'top'
+
         $tip
           .detach()
           .css({ top: 0, left: 0, display: 'block' })
@@ -60,6 +65,22 @@
 
         actualWidth = $tip[0].offsetWidth
         actualHeight = $tip[0].offsetHeight
+
+        // If auto-dir and the direction is RTL, the horizontal placement is reversed
+        if (autoDirPlace) {
+          var orgPlacement = placement
+          var isRTL = jQuery(document.querySelector("html")).attr('dir') === 'rtl' ? true : false
+          var xPlace = placement.replace(/bottom-|top-/g, '') || ''
+          var yPlace = placement.replace(/left|right/g, '') || ''
+
+          placement = xPlace == 'left'  && isRTL ? yPlace + 'right' :
+                      xPlace == 'right' && isRTL ? yPlace + 'left'  :
+                      placement
+
+          $tip
+            .removeClass(orgPlacement)
+            .addClass(placement)
+        }
 
         switch (placement) {
           case 'bottom':
