@@ -1,5 +1,5 @@
 # Bootstrap Tooltip Extended plugin
-Additional positions & RTL support for Twitter BS Tooltip
+Additional positions & RTL support for Twitter Bootstrap Tooltip
 
 ## Additional positions
 bottom-left, bottom-right, top-left, top-right
