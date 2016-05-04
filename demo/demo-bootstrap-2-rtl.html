@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Additional positions & RTL support for Twitter Bootstrap Tooltip.">
+	<meta name="author" content="Cyril Rezé">
+
+	<title>BS 2 :: Bootstrap Tooltip Extended Plugin</title>
+
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Bootstrap 2 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap Tooltip Extended -->
+	<link href="tooltip-extended.css" rel="stylesheet">
+	<script src="bootstrap-tooltip-extended.js"></script>
+
+	<style>
+	body {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	p {
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+	</style>
+
+	<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+	</script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation"><a href="index-rtl.html">Bootstrap 3</a></li>
+					<li role="presentation" class="active"><a href="demo-bootstrap-2.html">Bootstrap 2</a></li>
+					<li role="presentation"><a class="btn-success" href="demo-bootstrap-2.html">RTL Direction</a></li>
+				</ul>
+			</nav>
+			<h2 class="text-muted pull-left">RTL <small>Demo Bootstrap 2.3.2</small></h2>
+		</div>
+
+		<div class="well">
+			<h1>Bootstrap Tooltip Extended Plugin</h1>
+			<p class="lead">Additional positions & RTL support for Twitter Bootstrap Tooltip.<br />Bootstrap 2 & 3 support !</p>
+			<p><a class="btn btn-large btn-success" href="https://github.com/cyrilreze/bootstrap-tooltip-extended" role="button" data-toggle="tooltip" data-placement="auto-dir bottom-left" title="Yeah !!!">Download on GitHub</a></p>
+		</div>
+
+		<div class="row-fluid">
+			<div class="span6">
+			</div>
+			<div class="span6">
+				<h3>RTL Support</h3>
+				<p>When "<strong>auto-dir</strong>" is specified and page direction is <strong>RTL</strong> (right-to-left language), it will automatically reverse the horizontal placement of the tooltip.</p>
+				<p>For example, if placement is <code>auto-dir right</code>, the tooltip will display to the right (default direction is "ltr"), otherwise it will display to the left if the overall document direction is <strong>right-to-left</strong> (<code>html</code> tag has attribute <code>dir="rtl"</code>).</p>
+				<p>
+					<a href="#" data-toggle="tooltip" data-placement="auto-dir right" title="Tooltip on right (left in RTL)"><big> > Tooltip < </big></a>
+				</p>
+				<pre>&#x3C;a href=&#x22;#&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;auto-dir right&#x22; title=&#x22;Tooltip on right (left in RTL)&#x22;&#x3E;Tooltip&#x3C;/a&#x3E;</pre>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p>&copy; 2016 Cyril Rezé</p>
+		</footer>
+
+	</div> <!-- /container -->
+
+</body>
+</html>
