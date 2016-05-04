@@ -1,27 +1,20 @@
 # Bootstrap Tooltip Extended plugin
 Additional positions & RTL support for Twitter Bootstrap Tooltip
 
-## Additional positions
-bottom-left, bottom-right, top-left, top-right
+_Copyright (c) 2016 Cyril Rezé_
+
+_Licensed under the MIT license_
+
+## Demo & Documentation
+http://www.webic.fr/bootstrap-tooltip-extended/
+
+Additional positions: <code>bottom-left</code>, <code>bottom-right</code>, <code>top-left</code>, <code>top-right</code>
+RTL Support: <code>auto-dir</code>
 
 Example:
 
 ```
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-left" title="Tooltip on top-left">
-  Tooltip on top-left
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top-right" title="Tooltip on top-right">
-  Tooltip on top-right
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-left" title="Tooltip on bottom-left">
-  Tooltip on bottom-left
-</button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom-right" title="Tooltip on bottom-right">
-  Tooltip on bottom-right
-</button>
+<a href="#" data-toggle="tooltip" data-placement="auto-dir top-left" title="Tooltip on top-left (top-right in RTL)">
+  Tooltip on top-left with RTL support
+</a>
 ```
-
-## RTL Support
-When "auto-dir" is specified and page direction (language) is RTL, it will automatically reverse the horizontal placement of the tooltip.
-
-For example, if placement is "auto-dir left", the tooltip will display to the right if language is RTL (html attribute dir="rtl"), otherwise it will display left (default direction is "ltr").
