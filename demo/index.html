@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Additional positions & RTL support for Twitter Bootstrap Tooltip.">
+	<meta name="author" content="Cyril Rezé">
+
+	<title>Bootstrap Tooltip Extended Plugin</title>
+
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Bootstrap 3 -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap Tooltip Extended -->
+	<link href="tooltip-extended.css" rel="stylesheet">
+	<script src="bootstrap-tooltip-extended.js"></script>
+
+	<style>
+	body {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	p {
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+	</style>
+
+	<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+	</script>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" class="active"><a href="#">Bootstrap 3</a></li>
+					<li role="presentation"><a href="demo-bootstrap-2.html">Bootstrap 2</a></li>
+					<li role="presentation"><a class="text-muted" href="index-rtl.html"><dfn>RTL Direction</dfn></a></li>
+				</ul>
+			</nav>
+			<h2 class="text-muted">BS Tooltip Extended <small>Demo Bootstrap 3.3.6</small></h2>
+		</div>
+
+		<div class="jumbotron">
+			<h1>Bootstrap Tooltip Extended Plugin</h1>
+			<p class="lead">Additional positions & RTL support for Twitter Bootstrap Tooltip.<br />Bootstrap 2 & 3 support !</p>
+			<p><a class="btn btn-lg btn-success" href="https://github.com/cyrilreze/bootstrap-tooltip-extended" role="button" data-toggle="tooltip" data-placement="auto-dir bottom-left" title="Yeah !!!">Download on GitHub</a></p>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h3>Additional Positions</h3>
+				<p>The plugin <strong>BS Tooltip Extended</strong> adds <strong>4 extra positions</strong> for Bootstrap Tooltip: <code>top-left</code>, <code>top-right</code>, <code>bottom-left</code> and <code>bottom-right</code>.</p>
+				<h3>Demo</h3>
+				<div>&nbsp;</div>
+				<p>
+					<button type="button" class="btn btn-secondary btn-lg pull-left" data-toggle="tooltip" data-placement="top-left" title="Tooltip on top-left">
+						Tooltip on top-left
+					</button>
+					<button type="button" class="btn btn-secondary btn-lg pull-right" data-toggle="tooltip" data-placement="top-right" title="Tooltip on top-right">
+						Tooltip on top-right
+					</button>
+				</p>
+				<div class="clearfix"></div>
+				<p>
+					<button type="button" class="btn btn-secondary btn-lg pull-left" data-toggle="tooltip" data-placement="bottom-left" title="Tooltip on bottom-left">
+						Tooltip on bottom-left
+					</button>
+					<button type="button" class="btn btn-secondary btn-lg pull-right" data-toggle="tooltip" data-placement="bottom-right" title="Tooltip on bottom-right">
+						Tooltip on bottom-right
+					</button>
+				</p>
+				<div>&nbsp;</div>
+				<div>&nbsp;</div>
+			</div>
+			<div class="col-lg-6">
+				<h3>RTL Support</h3>
+				<p>When "<strong>auto-dir</strong>" is specified and page direction is <strong>RTL</strong> (right-to-left language), it will automatically reverse the horizontal placement of the tooltip.<br /><br />
+				For example, if placement is <code>auto-dir right</code>, the tooltip will display to the right (default direction is "ltr"), otherwise it will display to the left if the overall document direction is <strong>right-to-left</strong> (<code>html</code> tag has attribute <code>dir="rtl"</code>).</p>
+				<p>
+					<a href="#" data-toggle="tooltip" data-placement="auto-dir right" title="Tooltip on right (left in RTL)"><big> > Tooltip < </big></a>
+				</p>
+				<pre>&#x3C;a href=&#x22;#&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;auto-dir right&#x22; title=&#x22;Tooltip on right (left in RTL)&#x22;&#x3E;Tooltip&#x3C;/a&#x3E;</pre>
+			</div>
+		</div>
+
+		<hr class="hr-condensed" />
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>HTML</h3>
+				<pre>&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top-left&#x22; title=&#x22;Tooltip on top-left&#x22;&#x3E;
+  Tooltip on top-left
+&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;top-right&#x22; title=&#x22;Tooltip on top-right&#x22;&#x3E;
+  Tooltip on top-right
+&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;bottom-left&#x22; title=&#x22;Tooltip on bottom-left&#x22;&#x3E;
+  Tooltip on bottom-left
+&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;tooltip&#x22; data-placement=&#x22;bottom-right&#x22; title=&#x22;Tooltip on bottom-right&#x22;&#x3E;
+  Tooltip on bottom-right
+&#x3C;/button&#x3E;</pre>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>CSS</h3>
+				<pre>.tooltip.top-left,
+.tooltip.top-right {
+	margin-top: -3px;
+	padding: 5px 0;
+}
+.tooltip.bottom-left,
+.tooltip.bottom-right {
+	margin-top: 3px;
+	padding: 5px 0;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: black;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  border-width: 5px 5px 0;
+  border-top-color: black;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: black;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: black;
+}
+				</pre>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p>&copy; 2016 Cyril Rezé<span class="pull-right">GitHub <a href="https://github.com/cyrilreze" target="_blanck">@cyrilreze</a> | Twitter <a href="https://twitter.com/joomlic" target="_blanck">@JoomliC</a></span></p>
+		</footer>
+
+	</div> <!-- /container -->
+
+</body>
+</html>
