@@ -11,6 +11,8 @@
 
   "use strict"; // jshint ;_;
 
+  var bootstrapVersion = $.fn.tooltip.Constructor.VERSION ? $.fn.tooltip.Constructor.VERSION.split('.')[0] : '2'
+
 
  /* TOOLTIP-EXTENDED PUBLIC CLASS DEFINITION
   * ======================================== */
@@ -58,6 +60,7 @@
         $tip
           .detach()
           .css({ top: 0, left: 0, display: 'block' })
+          .addClass(placement)
 
         this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
 
@@ -66,10 +69,12 @@
         actualWidth = $tip[0].offsetWidth
         actualHeight = $tip[0].offsetHeight
 
+        // Get the overall document direction
+        var isRTL = jQuery(document.querySelector("html")).attr('dir') === 'rtl' ? true : false
+
         // If auto-dir and the direction is RTL, the horizontal placement is reversed
         if (autoDirPlace) {
           var orgPlacement = placement
-          var isRTL = jQuery(document.querySelector("html")).attr('dir') === 'rtl' ? true : false
           var xPlace = placement.replace(/bottom-|top-/g, '') || ''
           var yPlace = placement.replace(/left|right/g, '') || ''
 
@@ -97,22 +102,42 @@
             break
           // Additional positions
           case 'bottom-left':
-            tp = {top: pos.top + pos.height, left: pos.left};
-            break;
+            tp = {top: pos.top + pos.height, left: pos.left}
+            break
           case 'bottom-right':
-            tp = {top: pos.top + pos.height, left: pos.left + pos.width - actualWidth};
-            break;
+            tp = {top: pos.top + pos.height, left: pos.left + pos.width - actualWidth}
+            break
           case 'top-left':
-            tp = {top: pos.top - actualHeight, left: pos.left };
-            break;
+            tp = {top: pos.top - actualHeight, left: pos.left }
+            break
           case 'top-right':
-            tp = {top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth};
-            break;
+            tp = {top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth}
+            break
         }
 
         this.applyPlacement(tp, placement)
+
+        // Arrow position adjustment for Bootstrap 3
+        if ( bootstrapVersion === '3' ) {
+          this.newArrow(placement, actualWidth, isRTL)
+        }
+
         this.$element.trigger('shown')
       }
+    }
+  , newArrow: function (placement, actualWidth, isRTL) {
+      var $arrow = this.tip().find('.tooltip-arrow')
+        , arrow_width = parseInt($arrow.css('width'), 10)
+        , arrow_height = parseInt($arrow.css('height'), 10)
+  
+      var xPlace = placement.replace(/bottom-|top-/g, '') || ''
+      var yPlace = placement.replace(/left|right/g, '') || ''
+
+      if ( yPlace && xPlace == 'left' && !isRTL ) $arrow.css("left", arrow_width / 2)
+      if ( yPlace && xPlace == 'left' && isRTL )  $arrow.css("right", actualWidth - arrow_width - arrow_width / 2)
+      if ( yPlace && xPlace == 'right' )          $arrow.css("left", actualWidth - arrow_width - arrow_width / 2)
+      if ( yPlace == 'bottom-' )                  $arrow.css("top", arrow_height)
+      if ( yPlace == 'top-' )                     $arrow.css("bottom", arrow_height)
     }
   });
 
@@ -138,8 +163,8 @@
   * ============================ */
 
   $.fn.tooltip.noConflict = function () {
-    $.fn.tooltip = old;
-    return this;
+    $.fn.tooltip = old
+    return this
   };
 
 }(window.jQuery);
