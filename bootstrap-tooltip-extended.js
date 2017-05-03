@@ -2,7 +2,7 @@
  * bootstrap-tooltip-extended.js v1.0.0
  * https://github.com/cyrilreze/bootstrap-tooltip-extended
  * ===========================================================================
- * Copyright 2016 Cyril Rezé
+ * Copyright 2016-2017 Cyril Rezé
  * Licensed under MIT
  * https://github.com/cyrilreze/bootstrap-tooltip-extended/blob/master/LICENSE
  * =========================================================================== */
