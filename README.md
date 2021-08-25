@@ -6,7 +6,7 @@ _Copyright (c) 2016-2017 Cyril Rezé_
 _Licensed under the MIT license_
 
 ## Demo & Documentation
-http://www.webic.fr/bootstrap-tooltip-extended/
+https://www.webic.fr/bootstrap-tooltip-extended/
 
 - Additional positions: <code>bottom-left</code>, <code>bottom-right</code>, <code>top-left</code>, <code>top-right</code>
 - RTL Support: <code>auto-dir</code>
