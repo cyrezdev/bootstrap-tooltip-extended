@@ -1,7 +1,7 @@
 # Bootstrap Tooltip Extended plugin
 **Additional positions & RTL support for Twitter Bootstrap v2 & v3 Tooltip**
 
-_Copyright (c) 2016-2017 Cyril Rezé_
+_Copyright (c) 2016-2021 Cyril Rezé_
 
 _Licensed under the MIT license_
 
