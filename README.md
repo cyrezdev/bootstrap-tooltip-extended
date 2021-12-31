@@ -1,7 +1,8 @@
 # Bootstrap Tooltip Extended plugin
 **Additional positions & RTL support for Twitter Bootstrap v2 & v3 Tooltip**
 
-Created for Joomla. Integrated in official Joomla! 3 release.
+> Created for Joomla.
+> Integrated in official Joomla! 3 release.
 
 _Copyright (c) 2016-2021 Cyril Rezé_
 
