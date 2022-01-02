@@ -5,7 +5,7 @@
 > 
 > Integrated in official Joomla! 3 release.
 
-_Copyright (c) 2016-2021 Cyril Rezé_
+_Copyright (c) 2016-2022 Cyril Rezé_
 
 _Licensed under the MIT license_
 
