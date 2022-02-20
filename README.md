@@ -3,7 +3,7 @@
 
 > Created for Joomla 3.
 > 
-> Integrated in official Joomla! 3 release.
+> Integrated in official Joomla CMS.
 
 _Copyright (c) 2016-2022 Cyril Rezé_
 
