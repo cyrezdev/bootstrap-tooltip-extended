@@ -7,7 +7,7 @@
 
 _Copyright (c) 2016-2022 Cyril Rezé_
 
-_Licensed under the MIT license_
+_Licensed under the MIT license._
 
 ## Demo & Documentation
 https://www.webic.fr/bootstrap-tooltip-extended/
