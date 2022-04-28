@@ -18,7 +18,7 @@ https://www.webic.fr/bootstrap-tooltip-extended/
 Example:
 
 ```
-<a href="#" data-toggle="tooltip" data-placement="auto-dir top-left" title="Tooltip on top-left (top-right in RTL)">
+<a href="#" data-toggle="tooltip" data-placement="auto-dir top-left" title="Tooltip on top-left">
   Tooltip on top-left with RTL support
 </a>
 ```
