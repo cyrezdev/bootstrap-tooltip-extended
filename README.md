@@ -1,4 +1,4 @@
-# Bootstrap Tooltip Extended plugin
+# Bootstrap Tooltip Extended plugin ![GitHub](https://img.shields.io/github/license/cyrezdev/bootstrap-tooltip-extended)
 **Additional positions & RTL support for Twitter Bootstrap v2 & v3 Tooltip**
 
 > Created for Joomla!
